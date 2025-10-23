@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "64c00ebb-9e2e-4332-9b20-2da1a9a4aee6",
+		"name": "UserApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18222058",
+		"_collection_link": "https://www.postman.com/warped-trinity-518501/workspace/java-28-31/collection/18222058-64c00ebb-9e2e-4332-9b20-2da1a9a4aee6?action=share&source=collection_link&creator=18222058"
+	},
+	"item": [
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3055/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"userName\":\"John\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/users?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"userName\":\"John\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3055/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3055",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

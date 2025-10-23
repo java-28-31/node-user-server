@@ -4,7 +4,7 @@ export type User = {
     userName: string
 }
 
-const users:User[] = [
+let users:User[] = [
     {id:7, userName: "Bond"}
 ]
 
@@ -24,7 +24,7 @@ export const getUserById = (id:number) => {
 
 export const deleteUser = (id:number) => {
     const result = users.find(item => item.id === id);
-    users.filter(item => item.id !== id);
+    users = users.filter(item => item.id !== id);
     return result;
 }
 export const updateUser = (id:number, newName:string)=> {
