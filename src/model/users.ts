@@ -16,3 +16,24 @@ export const addUser = (user:User):boolean => {
 }
 
 export const getAllUsers = () => [...users]
+
+export const getUserById = (id:number) => {
+    const result = users.find(item => item.id === id);
+    return result;
+}
+
+export const deleteUser = (id:number) => {
+    const result = users.find(item => item.id === id);
+    users.filter(item => item.id !== id);
+    return result;
+}
+export const updateUser = (id:number, newName:string)=> {
+    let result = false;
+    const temp = users.find(item => item.id === id);
+    if(temp) {
+        temp.userName = newName;
+        result = true;
+    }
+    return result;
+}
+
